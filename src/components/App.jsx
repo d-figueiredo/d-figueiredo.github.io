@@ -1,4 +1,6 @@
+import { Routes, Route, Navigate } from 'react-router-dom'
 import Navigation from './navigation/Navigation'
+import About from './about/About'
 
 const App = () => {
   return (
@@ -7,7 +9,10 @@ const App = () => {
 				<Navigation />
 			</section>
 			<section className='sm:col-span-9 sm:h-screen'>
-				Diogo Figueiredo's personal website.
+				<Routes>
+					<Route path='/' element={<Navigate to='/about' />}/>
+					<Route path='/about' element={<About />} />
+				</Routes>
 			</section>
 		</main>
   )
