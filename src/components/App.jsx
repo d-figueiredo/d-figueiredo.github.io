@@ -8,11 +8,8 @@ import Contact from './contact/Contact'
 
 const App = () => {
   return (
-		<main className='sm:grid sm:grid-cols-12 sm:gap-x-8'>
-			<section className='fixed bottom-0 sm:relative w-full sm:col-span-3'>
-				<Navigation />
-			</section>
-			<section className='sm:col-span-9 sm:h-screen'>
+		<main className='h-screen flex flex-col gap-5 sm:flex-row-reverse'>
+			<section className='p-8 bg-white grow'>
 				<Routes>
 					<Route path='/' element={<Navigate to='/about' />}/>
 					<Route path='/about' element={<About />} />
@@ -21,6 +18,9 @@ const App = () => {
 					<Route path='/experience' element={<Experience />} />
 					<Route path='/contact' element={<Contact />} />
 				</Routes>
+			</section>
+			<section className='p-8 bg-white flex justify-center sm:flex-col sm:basis-2/12'>
+				<Navigation />
 			</section>
 		</main>
   )

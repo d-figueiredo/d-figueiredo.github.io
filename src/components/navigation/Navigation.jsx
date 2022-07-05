@@ -1,5 +1,9 @@
 import { NavLink } from 'react-router-dom'
 import About from '../icon/About'
+import Education from '../icon/Education'
+import Knowledge from '../icon/Knowledge'
+import Experience from '../icon/Experience'
+import Contact from '../icon/Contact'
 
 const navigations = [
 	{
@@ -9,35 +13,40 @@ const navigations = [
 	},
 	{
 		'to': 'education',
-		'icon': '',
+		'icon': <Education />,
 		'label': 'Education'
 	},
 	{
 		'to': 'knowledge',
-		'icon': 'ICON',
+		'icon': <Knowledge />,
 		'label': 'Knowledge'
 	},
 	{
 		'to': 'experience',
-		'icon': 'ICON',
+		'icon': <Experience />,
 		'label': 'Experience'
 	},
 	{
 		'to': 'contact',
-		'icon': 'ICON',
+		'icon': <Contact />,
 		'label': 'Contact'
 	},
 ]
 
+const state = {
+	active: 'text-red-600 stroke-red-600',
+	inactive: 'text-gray-500 stroke-gray-500'
+}
+
 const Navigation = () => {
   return (
 			<nav>
-				<ul className='flex p-6 bg-white sm:h-screen sm:flex-col justify-center gap-5 uppercase sm:text-right'>
+				<ul className='flex sm:flex-col justify-center gap-5 uppercase sm:text-right'>
 				{
 					navigations.map((item, index) => {
 						return(
 							<li key={index}>
-								<NavLink to={item.to} className={({isActive}) => (isActive ? 'text-red-600 stroke-red-600' : 'text-gray-500 stroke-gray-500')}>
+								<NavLink to={item.to} className={({isActive}) => (isActive ? state.active : state.inactive)}>
 									<span className='sm:hidden'>{item.icon}</span>
 									<span className='hidden sm:inline-block'>{item.label}</span>
 								</NavLink>
