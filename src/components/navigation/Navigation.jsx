@@ -31,17 +31,22 @@ const navigations = [
 
 const Navigation = () => {
   return (
-			<nav className='flex p-6 bg-white sm:h-screen sm:flex-col justify-center gap-x-5 uppercase'>
+			<nav>
+				<ul className='flex p-6 bg-white sm:h-screen sm:flex-col justify-center gap-5 uppercase sm:text-right'>
 				{
 					navigations.map((item, index) => {
 						return(
-							<NavLink key={index} to={item.to} className={({isActive}) => (isActive ? 'text-red-600 stroke-red-600' : 'text-gray-500 stroke-gray-500')}>
-								<span className='sm:hidden'>{item.icon}</span>
-								<span className='hidden sm:inline-block'>{item.label}</span>
-							</NavLink>
+							<li key={index}>
+								<NavLink to={item.to} className={({isActive}) => (isActive ? 'text-red-600 stroke-red-600' : 'text-gray-500 stroke-gray-500')}>
+									<span className='sm:hidden'>{item.icon}</span>
+									<span className='hidden sm:inline-block'>{item.label}</span>
+								</NavLink>
+							</li>
+							
 						)
 					})
 				}
+				</ul>
 			</nav>
   )
 }
