@@ -5,6 +5,7 @@ import Education from './education/Education'
 import Knowledge from './knowledge/Knowledge'
 import Experience from './experience/Experience'
 import Contact from './contact/Contact'
+import Logo from './logo/Logo'
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
 				</Routes>
 			</section>
 			<section className='p-8 bg-white flex justify-center sm:flex-col sm:basis-2/12'>
+				<Logo className='ml-auto' />
 				<Navigation />
 			</section>
 		</main>
