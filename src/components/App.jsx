@@ -24,7 +24,7 @@ const App = () => {
 			<section className='p-8 bg-white flex justify-center sm:justify-between sm:flex-col sm:basis-2/12'>
 				<Logo className='hidden sm:block sm:ml-auto' />
 				<Navigation />
-				<Footer className='hidden sm:block' />
+				<Footer className='hidden sm:flex sm:flex-col sm:gap-y-5' />
 			</section>
 		</main>
   )
