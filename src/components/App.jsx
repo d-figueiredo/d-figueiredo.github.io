@@ -1,11 +1,12 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
-import Navigation from './navigation/Navigation'
 import About from './about/About'
 import Education from './education/Education'
 import Knowledge from './knowledge/Knowledge'
 import Experience from './experience/Experience'
 import Contact from './contact/Contact'
 import Logo from './logo/Logo'
+import Navigation from './navigation/Navigation'
+import Footer from './footer/Footer'
 
 const App = () => {
   return (
@@ -20,9 +21,10 @@ const App = () => {
 					<Route path='/contact' element={<Contact />} />
 				</Routes>
 			</section>
-			<section className='p-8 bg-white flex justify-center sm:flex-col sm:basis-2/12'>
-				<Logo className='ml-auto' />
+			<section className='p-8 bg-white flex justify-center sm:justify-between sm:flex-col sm:basis-2/12'>
+				<Logo className='hidden sm:block sm:ml-auto' />
 				<Navigation />
+				<Footer className='hidden sm:block' />
 			</section>
 		</main>
   )
