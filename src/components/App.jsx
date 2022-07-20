@@ -11,7 +11,7 @@ import Footer from './footer/Footer'
 const App = () => {
   return (
 		<main className='h-screen flex flex-col gap-5 sm:flex-row-reverse'>
-			<section className='p-8 bg-white grow flex justify-center items-middle'>
+			<section className='p-8 bg-white flex justify-center items-middle grow'>
 				<Routes>
 					<Route path='/' element={<Navigate to='/about' />}/>
 					<Route path='/about' element={<About />} />
@@ -21,7 +21,7 @@ const App = () => {
 					<Route path='/contact' element={<Contact />} />
 				</Routes>
 			</section>
-			<section className='p-8 bg-white flex justify-center sm:justify-between sm:flex-col sm:basis-2/12'>
+			<section className='p-8 bg-white flex justify-center sm:justify-between sm:flex-col sm:basis-2/12 sm:shrink-0'>
 				<Logo className='hidden sm:block sm:ml-auto' />
 				<Navigation />
 				<Footer className='hidden sm:flex sm:flex-col sm:gap-y-5' />
